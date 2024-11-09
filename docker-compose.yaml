@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: dbt_postgres_db
+    environment:
+      POSTGRES_USER: db_user      # Замените на нужное имя пользователя
+      POSTGRES_PASSWORD: db_password  # Замените на нужный пароль
+      POSTGRES_DB: dbt_database   # Замените на нужное имя базы данных
+    ports:
+      - "5432:5432"               # Порт для подключения к PostgreSQL
+    volumes:
+      - db_data:/var/lib/postgresql/data  # Хранение данных
+
+  dbt:
+  image: dbt-postgres
+  container_name: dbt_runner
+  environment:
+    DBT_PROFILES_DIR: /dbt/my_project/profiles
+  volumes:
+    - ./dbt:/dbt
+  depends_on:
+    - db
+  command: ["dbt", "run"]
+  working_dir: /dbt/my_project
+
+
+volumes:
+  db_data:
