@@ -22,7 +22,7 @@ services:
       - ./bdst_dbt:/dbt/bdst_dbt
     depends_on:
       - db
-    command: ["dbt", "run"]
+    command: tail -f /dev/null  # Запускает контейнер в режиме ожидания
     working_dir: /dbt/bdst_dbt
 
 

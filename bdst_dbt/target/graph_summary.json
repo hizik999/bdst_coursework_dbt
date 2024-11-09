@@ -1,1 +1,1 @@
-{"_invocation_id": "448be51e-0a01-4c1b-8b0b-2ef3b184e34b", "linked": {"0": {"name": "model.bdst_dbt.model", "type": "model"}}}
+{"_invocation_id": "77fb6121-ae9c-40c0-8661-e8b295231a90", "linked": {"0": {"name": "model.bdst_dbt.model", "type": "model"}, "1": {"name": "seed.bdst_dbt.source_ads_bing", "type": "seed"}, "2": {"name": "seed.bdst_dbt.source_ads_tiktok", "type": "seed"}, "3": {"name": "seed.bdst_dbt.source_ads_twitter", "type": "seed"}, "4": {"name": "seed.bdst_dbt.source_ads_facebook", "type": "seed"}}}
