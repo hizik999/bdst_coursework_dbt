@@ -1,0 +1,12 @@
+bdst_dbt:
+  outputs:
+    dev:
+      type: postgres
+      host: db
+      user: db_user
+      password: db_password
+      port: 5432
+      dbname: dbt_database
+      schema: public
+      threads: 1
+  target: dev

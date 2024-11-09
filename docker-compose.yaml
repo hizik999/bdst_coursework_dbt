@@ -14,16 +14,17 @@ services:
       - db_data:/var/lib/postgresql/data  # Хранение данных
 
   dbt:
-  image: dbt-postgres
-  container_name: dbt_runner
-  environment:
-    DBT_PROFILES_DIR: /dbt/my_project/profiles
-  volumes:
-    - ./dbt:/dbt
-  depends_on:
-    - db
-  command: ["dbt", "run"]
-  working_dir: /dbt/my_project
+    image: dbt-postgres
+    container_name: dbt_runner
+    environment:
+      DBT_PROFILES_DIR: /dbt/bdst_dbt
+    volumes:
+      - ./bdst_dbt:/dbt/bdst_dbt
+    depends_on:
+      - db
+    command: ["dbt", "run"]
+    working_dir: /dbt/bdst_dbt
+
 
 
 volumes:

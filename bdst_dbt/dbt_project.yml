@@ -1,0 +1,9 @@
+name: 'bdst_dbt'
+version: '1.0'
+config-version: 2
+
+profile: 'bdst_dbt'
+
+model-paths: ["models"]  # Замените source-paths на model-paths
+target-path: "target"
+clean-targets: ["target"]
