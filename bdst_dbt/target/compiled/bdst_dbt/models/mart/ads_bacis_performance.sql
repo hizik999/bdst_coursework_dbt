@@ -1,1 +1,1 @@
-select * from "dbt_database"."public"."mcdm_with_metrics"
+select * from "shared_db"."dbt_schema"."mcdm_with_metrics"

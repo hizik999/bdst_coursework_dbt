@@ -25,7 +25,7 @@ WITH ads_facebook AS (
         spend,
         purchase AS conversions,
         views AS video_views
-    FROM "dbt_database"."public"."source_ads_facebook"
+    FROM "shared_db"."dbt_schema"."source_ads_facebook"
 )
 
 SELECT * FROM ads_facebook

@@ -2,7 +2,7 @@
   
     
 
-  create  table "dbt_database"."public"."ads_bing__dbt_tmp"
+  create  table "shared_db"."dbt_schema"."ads_bing__dbt_tmp"
   
   
     as
@@ -35,7 +35,7 @@
         spend,
         conv AS conversions,
         0 AS video_views
-    FROM "dbt_database"."public"."source_ads_bing"
+    FROM "shared_db"."dbt_schema"."source_ads_bing"
 )
 
 SELECT * FROM bing

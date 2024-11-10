@@ -1,5 +1,5 @@
 
-  create view "dbt_database"."public"."mcdm_with_metrics__dbt_tmp"
+  create view "shared_db"."dbt_schema"."mcdm_with_metrics__dbt_tmp"
     
     
   as (
@@ -9,6 +9,6 @@
     round(sum(spend) / sum(conversions), 0) as conversion_cost,
     sum(impressions) as impressions,
     round(sum(spend) / sum(clicks), 2) as cpc
-from "dbt_database"."public"."mcdm"
+from "shared_db"."dbt_schema"."mcdm"
 group by channel
   );

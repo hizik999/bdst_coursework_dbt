@@ -7,13 +7,11 @@ services:
     environment:
       POSTGRES_USER: db_user      
       POSTGRES_PASSWORD: db_password  
-      POSTGRES_DB: dbt_database   
+      POSTGRES_DB: shared_db   
     ports:
       - "5432:5432"               
     volumes:
       - db_data:/var/lib/postgresql/data
-    networks:
-      - superset_network
 
   dbt:
     image: dbt-postgres
@@ -40,15 +38,10 @@ services:
       - "8088:8088"   # Порт Superset для доступа
     volumes:
       - ./superset_config.py:/app/pythonpath/superset_config.py
-      - ./superset_home:/app/superset_home 
+      #- ./superset_home:/app/superset_home 
     depends_on:
       - db
-    networks:
-      - superset_network
-
-networks:
-  superset_network:
-
+    
 
 volumes:
   db_data:

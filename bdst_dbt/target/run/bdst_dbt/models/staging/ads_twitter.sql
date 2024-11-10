@@ -2,7 +2,7 @@
   
     
 
-  create  table "dbt_database"."public"."ads_twitter__dbt_tmp"
+  create  table "shared_db"."dbt_schema"."ads_twitter__dbt_tmp"
   
   
     as
@@ -35,7 +35,7 @@
         spend,
         engagements AS conversions,
         video_total_views AS video_views
-    FROM "dbt_database"."public"."source_ads_twitter"
+    FROM "shared_db"."dbt_schema"."source_ads_twitter"
 )
 
 SELECT * FROM twitter

@@ -2,7 +2,7 @@
   
     
 
-  create  table "dbt_database"."public"."ads_tiktok__dbt_tmp"
+  create  table "shared_db"."dbt_schema"."ads_tiktok__dbt_tmp"
   
   
     as
@@ -35,7 +35,7 @@
         spend,
         conversions,
         video_views
-    FROM "dbt_database"."public"."source_ads_tiktok"
+    FROM "shared_db"."dbt_schema"."source_ads_tiktok"
 )
 
 SELECT * FROM tiktok

@@ -1,25 +1,25 @@
 WITH mcdm AS (
     SELECT
         *
-    FROM "dbt_database"."public"."ads_tiktok"
+    FROM "shared_db"."dbt_schema"."ads_tiktok"
 
     UNION ALL
 
     SELECT
         *
-    FROM "dbt_database"."public"."ads_facebook"
+    FROM "shared_db"."dbt_schema"."ads_facebook"
 
     UNION ALL
 
     SELECT
         *
-    FROM "dbt_database"."public"."ads_twitter"
+    FROM "shared_db"."dbt_schema"."ads_twitter"
 
     UNION ALL
 
     SELECT
         *
-    FROM "dbt_database"."public"."ads_bing"
+    FROM "shared_db"."dbt_schema"."ads_bing"
 )
 
 SELECT * FROM mcdm

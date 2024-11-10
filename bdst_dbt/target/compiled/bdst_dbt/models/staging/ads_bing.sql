@@ -25,7 +25,7 @@ WITH bing AS (
         spend,
         conv AS conversions,
         0 AS video_views
-    FROM "dbt_database"."public"."source_ads_bing"
+    FROM "shared_db"."dbt_schema"."source_ads_bing"
 )
 
 SELECT * FROM bing

@@ -25,7 +25,7 @@ WITH tiktok AS (
         spend,
         conversions,
         video_views
-    FROM "dbt_database"."public"."source_ads_tiktok"
+    FROM "shared_db"."dbt_schema"."source_ads_tiktok"
 )
 
 SELECT * FROM tiktok

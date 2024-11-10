@@ -6,7 +6,6 @@ bdst_dbt:
       user: db_user
       password: db_password
       port: 5432
-      dbname: dbt_database
-      schema: public
-      threads: 1
+      dbname: shared_db
+      schema: dbt_schema  # Укажите отдельную схему для DBT
   target: dev
