@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "dbt_database"."public"."source_ads_tiktok" ("__insert_date" timestamp without time zone,"ad_id" integer,"add_to_cart" integer,"adgroup_id" integer,"campaign_id" integer,"channel" text,"clicks" integer,"date" date,"impressions" integer,"rt_installs" integer,"skan_app_install" integer,"ad_status" text,"ad_text" text,"purchase" integer,"registrations" integer,"spend" integer,"conversions" integer,"skan_conversion" integer,"video_views" integer)
-  ;
+    truncate table "dbt_database"."public"."source_ads_tiktok";
     -- dbt seed --
     
           insert into "dbt_database"."public"."source_ads_tiktok" ("__insert_date", "ad_id", "add_to_cart", "adgroup_id", "campaign_id", "channel", "clicks", "date", "impressions", "rt_installs", "skan_app_install", "ad_status", "ad_text", "purchase", "registrations", "spend", "conversions", "skan_conversion", "video_views") values
