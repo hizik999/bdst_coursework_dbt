@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: ads
+    #database: db      # Указываем название базы данных PostgreSQL
+    schema: public               # Указываем схему в PostgreSQL
+    tables:
+      - name: source_ads_twitter
+      - name: source_ads_tiktok
+      - name: source_ads_facebook
+      - name: source_ads_bing

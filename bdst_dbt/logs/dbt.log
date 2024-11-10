@@ -536,3 +536,1889 @@ with relation as (
 [0m13:23:01.599486 [debug] [MainThread]: Command `dbt seed` succeeded at 13:23:01.599399 after 14.49 seconds
 [0m13:23:01.600232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb1a66b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb0c77e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffade76e20>]}
 [0m13:23:01.600854 [debug] [MainThread]: Flushing usage events
+[0m15:52:10.557074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba125be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba3bad00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9a13df0>]}
+
+
+============================== 15:52:10.564140 | bdd5c2ef-32ca-44f2-9542-05add1c16d1f ==============================
+[0m15:52:10.564140 [info ] [MainThread]: Running with dbt=1.8.8
+[0m15:52:10.564739 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/dbt/bdst_dbt/logs', 'profiles_dir': '/dbt/bdst_dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:52:10.680487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bdd5c2ef-32ca-44f2-9542-05add1c16d1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7b17fd0>]}
+[0m15:52:10.708043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bdd5c2ef-32ca-44f2-9542-05add1c16d1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba3a9be0>]}
+[0m15:52:10.708815 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m15:52:10.721785 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m15:52:10.821389 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:52:10.821896 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:52:10.844584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bdd5c2ef-32ca-44f2-9542-05add1c16d1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb77d1130>]}
+[0m15:52:10.914479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bdd5c2ef-32ca-44f2-9542-05add1c16d1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb772bd30>]}
+[0m15:52:10.915128 [info ] [MainThread]: Found 1 model, 4 seeds, 423 macros
+[0m15:52:10.915634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bdd5c2ef-32ca-44f2-9542-05add1c16d1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb77adfd0>]}
+[0m15:52:10.916892 [info ] [MainThread]: 
+[0m15:52:10.917580 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:52:10.918506 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_database'
+[0m15:52:10.964246 [debug] [ThreadPool]: Using postgres connection "list_dbt_database"
+[0m15:52:10.964758 [debug] [ThreadPool]: On list_dbt_database: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "list_dbt_database"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:52:10.965056 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:52:10.990253 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.025 seconds
+[0m15:52:10.991400 [debug] [ThreadPool]: On list_dbt_database: Close
+[0m15:52:10.994830 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbt_database, now list_dbt_database_public)
+[0m15:52:10.998889 [debug] [ThreadPool]: Using postgres connection "list_dbt_database_public"
+[0m15:52:10.999207 [debug] [ThreadPool]: On list_dbt_database_public: BEGIN
+[0m15:52:10.999511 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:52:11.004613 [debug] [ThreadPool]: SQL status: BEGIN in 0.005 seconds
+[0m15:52:11.005056 [debug] [ThreadPool]: Using postgres connection "list_dbt_database_public"
+[0m15:52:11.005441 [debug] [ThreadPool]: On list_dbt_database_public: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "list_dbt_database_public"} */
+select
+      'dbt_database' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_database' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_database' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m15:52:11.017815 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.012 seconds
+[0m15:52:11.019171 [debug] [ThreadPool]: On list_dbt_database_public: ROLLBACK
+[0m15:52:11.019846 [debug] [ThreadPool]: On list_dbt_database_public: Close
+[0m15:52:11.023897 [debug] [MainThread]: Using postgres connection "master"
+[0m15:52:11.024339 [debug] [MainThread]: On master: BEGIN
+[0m15:52:11.024631 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:52:11.028720 [debug] [MainThread]: SQL status: BEGIN in 0.004 seconds
+[0m15:52:11.029077 [debug] [MainThread]: Using postgres connection "master"
+[0m15:52:11.029420 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:52:11.035359 [debug] [MainThread]: SQL status: SELECT 0 in 0.006 seconds
+[0m15:52:11.036372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bdd5c2ef-32ca-44f2-9542-05add1c16d1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7777c40>]}
+[0m15:52:11.036769 [debug] [MainThread]: On master: ROLLBACK
+[0m15:52:11.037131 [debug] [MainThread]: Using postgres connection "master"
+[0m15:52:11.037422 [debug] [MainThread]: On master: BEGIN
+[0m15:52:11.037843 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m15:52:11.038113 [debug] [MainThread]: On master: COMMIT
+[0m15:52:11.038395 [debug] [MainThread]: Using postgres connection "master"
+[0m15:52:11.038650 [debug] [MainThread]: On master: COMMIT
+[0m15:52:11.038981 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:52:11.039241 [debug] [MainThread]: On master: Close
+[0m15:52:11.039658 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:52:11.040068 [info ] [MainThread]: 
+[0m15:52:11.046320 [debug] [Thread-1  ]: Began running node model.bdst_dbt.model
+[0m15:52:11.046855 [info ] [Thread-1  ]: 1 of 1 START sql view model public.model ....................................... [RUN]
+[0m15:52:11.047393 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dbt_database_public, now model.bdst_dbt.model)
+[0m15:52:11.047790 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.model
+[0m15:52:11.052731 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.model"
+[0m15:52:11.055229 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.model
+[0m15:52:11.077638 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.model"
+[0m15:52:11.079335 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m15:52:11.079688 [debug] [Thread-1  ]: On model.bdst_dbt.model: BEGIN
+[0m15:52:11.080007 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m15:52:11.084864 [debug] [Thread-1  ]: SQL status: BEGIN in 0.005 seconds
+[0m15:52:11.085256 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m15:52:11.085600 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+
+  create view "dbt_database"."public"."model__dbt_tmp"
+    
+    
+  as (
+    -- models/example_model.sql
+SELECT 1 AS example_column
+  );
+[0m15:52:11.091473 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.006 seconds
+[0m15:52:11.095864 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m15:52:11.096304 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+alter table "dbt_database"."public"."model" rename to "model__dbt_backup"
+[0m15:52:11.097310 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m15:52:11.099102 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m15:52:11.099446 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+alter table "dbt_database"."public"."model__dbt_tmp" rename to "model"
+[0m15:52:11.099868 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m15:52:11.109154 [debug] [Thread-1  ]: On model.bdst_dbt.model: COMMIT
+[0m15:52:11.109517 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m15:52:11.109818 [debug] [Thread-1  ]: On model.bdst_dbt.model: COMMIT
+[0m15:52:11.110965 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m15:52:11.114500 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."model__dbt_backup"
+[0m15:52:11.117126 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m15:52:11.117468 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+drop view if exists "dbt_database"."public"."model__dbt_backup" cascade
+[0m15:52:11.120990 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.003 seconds
+[0m15:52:11.122622 [debug] [Thread-1  ]: On model.bdst_dbt.model: Close
+[0m15:52:11.123703 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bdd5c2ef-32ca-44f2-9542-05add1c16d1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb6a7d9d0>]}
+[0m15:52:11.124258 [info ] [Thread-1  ]: 1 of 1 OK created sql view model public.model .................................. [[32mCREATE VIEW[0m in 0.08s]
+[0m15:52:11.124831 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.model
+[0m15:52:11.125733 [debug] [MainThread]: Using postgres connection "master"
+[0m15:52:11.126041 [debug] [MainThread]: On master: BEGIN
+[0m15:52:11.126318 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:52:11.130746 [debug] [MainThread]: SQL status: BEGIN in 0.004 seconds
+[0m15:52:11.131090 [debug] [MainThread]: On master: COMMIT
+[0m15:52:11.131385 [debug] [MainThread]: Using postgres connection "master"
+[0m15:52:11.131660 [debug] [MainThread]: On master: COMMIT
+[0m15:52:11.131985 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:52:11.132464 [debug] [MainThread]: On master: Close
+[0m15:52:11.133058 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:52:11.133417 [debug] [MainThread]: Connection 'model.bdst_dbt.model' was properly closed.
+[0m15:52:11.133872 [info ] [MainThread]: 
+[0m15:52:11.135167 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.22 seconds (0.22s).
+[0m15:52:11.137628 [debug] [MainThread]: Command end result
+[0m15:52:11.169676 [info ] [MainThread]: 
+[0m15:52:11.170238 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:52:11.170789 [info ] [MainThread]: 
+[0m15:52:11.171406 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m15:52:11.173025 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.6492803, "process_user_time": 1.111567, "process_kernel_time": 0.353038, "process_mem_max_rss": "103272", "process_in_blocks": "77344", "process_out_blocks": "768"}
+[0m15:52:11.173694 [debug] [MainThread]: Command `dbt run` succeeded at 15:52:11.173611 after 0.65 seconds
+[0m15:52:11.174104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba125be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb8d3ea30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba3a9be0>]}
+[0m15:52:11.174519 [debug] [MainThread]: Flushing usage events
+[0m17:13:26.274140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b306b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff897b1a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff897b19d0>]}
+
+
+============================== 17:13:26.277422 | f78593b8-bd48-4847-b723-33130d0dfe3e ==============================
+[0m17:13:26.277422 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:13:26.278145 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/dbt/bdst_dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/dbt/bdst_dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:13:26.369276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b18c2b0>]}
+[0m17:13:26.399114 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8a4be130>]}
+[0m17:13:26.399883 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m17:13:26.410724 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m17:13:26.467105 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:13:26.467866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8a4c89a0>]}
+[0m17:13:27.100218 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m17:13:27.102001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88000af0>]}
+[0m17:13:27.383221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83497ee0>]}
+[0m17:13:27.521324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83631e80>]}
+[0m17:13:27.521917 [info ] [MainThread]: Found 8 models, 4 seeds, 100 data tests, 4 sources, 423 macros
+[0m17:13:27.522509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8342b790>]}
+[0m17:13:27.524805 [info ] [MainThread]: 
+[0m17:13:27.525430 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:13:27.528640 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_database'
+[0m17:13:27.570139 [debug] [ThreadPool]: Using postgres connection "list_dbt_database"
+[0m17:13:27.570706 [debug] [ThreadPool]: On list_dbt_database: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "list_dbt_database"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:13:27.571016 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:13:27.581033 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.010 seconds
+[0m17:13:27.582144 [debug] [ThreadPool]: On list_dbt_database: Close
+[0m17:13:27.583771 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbt_database, now list_dbt_database_public)
+[0m17:13:27.588025 [debug] [ThreadPool]: Using postgres connection "list_dbt_database_public"
+[0m17:13:27.588439 [debug] [ThreadPool]: On list_dbt_database_public: BEGIN
+[0m17:13:27.588759 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:13:27.593261 [debug] [ThreadPool]: SQL status: BEGIN in 0.004 seconds
+[0m17:13:27.593665 [debug] [ThreadPool]: Using postgres connection "list_dbt_database_public"
+[0m17:13:27.593998 [debug] [ThreadPool]: On list_dbt_database_public: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "list_dbt_database_public"} */
+select
+      'dbt_database' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_database' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_database' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:13:27.596862 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.003 seconds
+[0m17:13:27.597812 [debug] [ThreadPool]: On list_dbt_database_public: ROLLBACK
+[0m17:13:27.598184 [debug] [ThreadPool]: On list_dbt_database_public: Close
+[0m17:13:27.601947 [debug] [MainThread]: Using postgres connection "master"
+[0m17:13:27.602400 [debug] [MainThread]: On master: BEGIN
+[0m17:13:27.602723 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:13:27.606903 [debug] [MainThread]: SQL status: BEGIN in 0.004 seconds
+[0m17:13:27.607262 [debug] [MainThread]: Using postgres connection "master"
+[0m17:13:27.607624 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m17:13:27.610736 [debug] [MainThread]: SQL status: SELECT 0 in 0.003 seconds
+[0m17:13:27.611625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff836ef520>]}
+[0m17:13:27.612048 [debug] [MainThread]: On master: ROLLBACK
+[0m17:13:27.612415 [debug] [MainThread]: Using postgres connection "master"
+[0m17:13:27.612692 [debug] [MainThread]: On master: BEGIN
+[0m17:13:27.613096 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m17:13:27.613379 [debug] [MainThread]: On master: COMMIT
+[0m17:13:27.613657 [debug] [MainThread]: Using postgres connection "master"
+[0m17:13:27.613941 [debug] [MainThread]: On master: COMMIT
+[0m17:13:27.614278 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:13:27.614542 [debug] [MainThread]: On master: Close
+[0m17:13:27.614925 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:13:27.615326 [info ] [MainThread]: 
+[0m17:13:27.617205 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_bing
+[0m17:13:27.617740 [info ] [Thread-1  ]: 1 of 8 START sql view model public.ads_bing .................................... [RUN]
+[0m17:13:27.618298 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dbt_database_public, now model.bdst_dbt.ads_bing)
+[0m17:13:27.618703 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_bing
+[0m17:13:27.624588 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_bing"
+[0m17:13:27.626430 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_bing
+[0m17:13:27.648689 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_bing"
+[0m17:13:27.650412 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bing"
+[0m17:13:27.650780 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: BEGIN
+[0m17:13:27.651132 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:13:27.655721 [debug] [Thread-1  ]: SQL status: BEGIN in 0.005 seconds
+[0m17:13:27.656115 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bing"
+[0m17:13:27.656447 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_bing"} */
+
+  create view "dbt_database"."public"."ads_bing__dbt_tmp"
+    
+    
+  as (
+    WITH bing AS (
+    SELECT
+        ad_id,
+        0 AS add_to_cart,
+        adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        0 AS comments,
+        0 AS creative_id,
+        date,
+        clicks + conv + imps + revenue AS engagements,
+        imps AS impressions,
+        0 AS installs,
+        0 AS likes,
+        0 AS link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        0 AS purchase,
+        0 AS registrations,
+        revenue,
+        0 AS shares,
+        spend,
+        conv AS conversions,
+        0 AS video_views
+    FROM "db"."public"."source_ads_bing"
+)
+
+SELECT * FROM bing
+  );
+[0m17:13:27.657171 [debug] [Thread-1  ]: Postgres adapter: Postgres error: cross-database references are not implemented: "db.public.source_ads_bing"
+LINE 34:     FROM "db"."public"."source_ads_bing"
+                  ^
+
+[0m17:13:27.657502 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: ROLLBACK
+[0m17:13:27.657934 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: Close
+[0m17:13:27.664465 [debug] [Thread-1  ]: Database Error in model ads_bing (models/staging/ads_bing.sql)
+  cross-database references are not implemented: "db.public.source_ads_bing"
+  LINE 34:     FROM "db"."public"."source_ads_bing"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_bing.sql
+[0m17:13:27.665658 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b102ca0>]}
+[0m17:13:27.666214 [error] [Thread-1  ]: 1 of 8 ERROR creating sql view model public.ads_bing ........................... [[31mERROR[0m in 0.05s]
+[0m17:13:27.666808 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_bing
+[0m17:13:27.667183 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_facebook
+[0m17:13:27.667653 [info ] [Thread-1  ]: 2 of 8 START sql view model public.ads_facebook ................................ [RUN]
+[0m17:13:27.668152 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_bing, now model.bdst_dbt.ads_facebook)
+[0m17:13:27.668466 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_facebook
+[0m17:13:27.670889 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_facebook"
+[0m17:13:27.672009 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_facebook
+[0m17:13:27.674802 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_facebook"
+[0m17:13:27.675944 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_facebook"
+[0m17:13:27.676426 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: BEGIN
+[0m17:13:27.676767 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:13:27.681938 [debug] [Thread-1  ]: SQL status: BEGIN in 0.005 seconds
+[0m17:13:27.682420 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_facebook"
+[0m17:13:27.682861 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_facebook"} */
+
+  create view "dbt_database"."public"."ads_facebook__dbt_tmp"
+    
+    
+  as (
+    WITH ads_facebook AS (
+    SELECT
+        ad_id,
+        add_to_cart,
+        adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        comments,
+        creative_id,
+        date,
+        clicks + comments + likes + shares + views + purchase + complete_registration AS engagements,
+        impressions,
+        0 AS installs,
+        likes,
+        inline_link_clicks as link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        purchase,
+        complete_registration AS registrations,
+        purchase_value AS revenue,
+        shares,
+        spend,
+        purchase AS conversions,
+        views AS video_views
+    FROM "db"."public"."source_ads_facebook"
+)
+
+SELECT * FROM ads_facebook
+  );
+[0m17:13:27.683688 [debug] [Thread-1  ]: Postgres adapter: Postgres error: cross-database references are not implemented: "db.public.source_ads_facebook"
+LINE 34:     FROM "db"."public"."source_ads_facebook"
+                  ^
+
+[0m17:13:27.684196 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: ROLLBACK
+[0m17:13:27.684658 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: Close
+[0m17:13:27.685425 [debug] [Thread-1  ]: Database Error in model ads_facebook (models/staging/ads_facebook.sql)
+  cross-database references are not implemented: "db.public.source_ads_facebook"
+  LINE 34:     FROM "db"."public"."source_ads_facebook"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_facebook.sql
+[0m17:13:27.685939 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88c1e700>]}
+[0m17:13:27.686508 [error] [Thread-1  ]: 2 of 8 ERROR creating sql view model public.ads_facebook ....................... [[31mERROR[0m in 0.02s]
+[0m17:13:27.687155 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_facebook
+[0m17:13:27.687608 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_tiktok
+[0m17:13:27.688124 [info ] [Thread-1  ]: 3 of 8 START sql view model public.ads_tiktok .................................. [RUN]
+[0m17:13:27.688693 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_facebook, now model.bdst_dbt.ads_tiktok)
+[0m17:13:27.689073 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_tiktok
+[0m17:13:27.691432 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_tiktok"
+[0m17:13:27.692805 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_tiktok
+[0m17:13:27.696303 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_tiktok"
+[0m17:13:27.697396 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_tiktok"
+[0m17:13:27.697828 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: BEGIN
+[0m17:13:27.698180 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:13:27.702666 [debug] [Thread-1  ]: SQL status: BEGIN in 0.004 seconds
+[0m17:13:27.703170 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_tiktok"
+[0m17:13:27.703718 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_tiktok"} */
+
+  create view "dbt_database"."public"."ads_tiktok__dbt_tmp"
+    
+    
+  as (
+    WITH tiktok AS (
+    SELECT
+        ad_id,
+        0 AS add_to_cart,
+        0 AS adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        0 AS comments,
+        0 AS creative_id,
+        date,
+        clicks + add_to_cart + purchase + registrations + video_views AS engagements,
+        impressions,
+        0 AS installs,
+        0 AS likes,
+        0 AS link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        purchase,
+        registrations,
+        0 AS revenue,
+        0 AS shares,
+        spend,
+        conversions,
+        video_views
+    FROM "db"."public"."source_ads_tiktok"
+)
+
+SELECT * FROM tiktok
+  );
+[0m17:13:27.704396 [debug] [Thread-1  ]: Postgres adapter: Postgres error: cross-database references are not implemented: "db.public.source_ads_tiktok"
+LINE 34:     FROM "db"."public"."source_ads_tiktok"
+                  ^
+
+[0m17:13:27.704768 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: ROLLBACK
+[0m17:13:27.705247 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: Close
+[0m17:13:27.706010 [debug] [Thread-1  ]: Database Error in model ads_tiktok (models/staging/ads_tiktok.sql)
+  cross-database references are not implemented: "db.public.source_ads_tiktok"
+  LINE 34:     FROM "db"."public"."source_ads_tiktok"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_tiktok.sql
+[0m17:13:27.706454 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83380070>]}
+[0m17:13:27.707016 [error] [Thread-1  ]: 3 of 8 ERROR creating sql view model public.ads_tiktok ......................... [[31mERROR[0m in 0.02s]
+[0m17:13:27.707720 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_tiktok
+[0m17:13:27.708098 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_twitter
+[0m17:13:27.708583 [info ] [Thread-1  ]: 4 of 8 START sql view model public.ads_twitter ................................. [RUN]
+[0m17:13:27.709081 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_tiktok, now model.bdst_dbt.ads_twitter)
+[0m17:13:27.709494 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_twitter
+[0m17:13:27.711758 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_twitter"
+[0m17:13:27.712910 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_twitter
+[0m17:13:27.715367 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_twitter"
+[0m17:13:27.716686 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_twitter"
+[0m17:13:27.717114 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: BEGIN
+[0m17:13:27.717500 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:13:27.722108 [debug] [Thread-1  ]: SQL status: BEGIN in 0.005 seconds
+[0m17:13:27.722519 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_twitter"
+[0m17:13:27.722863 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_twitter"} */
+
+  create view "dbt_database"."public"."ads_twitter__dbt_tmp"
+    
+    
+  as (
+    WITH twitter AS (
+    SELECT
+        0 AS ad_id,
+        0 AS add_to_cart,
+        0 AS adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        comments,
+        0 AS creative_id,
+        date,
+        engagements,
+        impressions,
+        0 AS installs,
+        likes,
+        0 AS link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        0 AS purchase,
+        0 AS registrations,
+        0 AS revenue,
+        0 AS shares,
+        spend,
+        engagements AS conversions,
+        video_total_views AS video_views
+    FROM "db"."public"."source_ads_twitter"
+)
+
+SELECT * FROM twitter
+  );
+[0m17:13:27.723432 [debug] [Thread-1  ]: Postgres adapter: Postgres error: cross-database references are not implemented: "db.public.source_ads_twitter"
+LINE 34:     FROM "db"."public"."source_ads_twitter"
+                  ^
+
+[0m17:13:27.723781 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: ROLLBACK
+[0m17:13:27.724456 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: Close
+[0m17:13:27.725354 [debug] [Thread-1  ]: Database Error in model ads_twitter (models/staging/ads_twitter.sql)
+  cross-database references are not implemented: "db.public.source_ads_twitter"
+  LINE 34:     FROM "db"."public"."source_ads_twitter"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_twitter.sql
+[0m17:13:27.727083 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88c7bc40>]}
+[0m17:13:27.727658 [error] [Thread-1  ]: 4 of 8 ERROR creating sql view model public.ads_twitter ........................ [[31mERROR[0m in 0.02s]
+[0m17:13:27.728188 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_twitter
+[0m17:13:27.728561 [debug] [Thread-1  ]: Began running node model.bdst_dbt.model
+[0m17:13:27.729087 [info ] [Thread-1  ]: 5 of 8 START sql view model public.model ....................................... [RUN]
+[0m17:13:27.729569 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_twitter, now model.bdst_dbt.model)
+[0m17:13:27.729927 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.model
+[0m17:13:27.731393 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.model"
+[0m17:13:27.732486 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.model
+[0m17:13:27.734871 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.model"
+[0m17:13:27.735860 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:13:27.736179 [debug] [Thread-1  ]: On model.bdst_dbt.model: BEGIN
+[0m17:13:27.736477 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:13:27.741232 [debug] [Thread-1  ]: SQL status: BEGIN in 0.005 seconds
+[0m17:13:27.741611 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:13:27.741921 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+
+  create view "dbt_database"."public"."model__dbt_tmp"
+    
+    
+  as (
+    -- models/example_model.sql
+SELECT 1 AS example_column
+  );
+[0m17:13:27.744005 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.002 seconds
+[0m17:13:27.748470 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:13:27.748870 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+alter table "dbt_database"."public"."model" rename to "model__dbt_backup"
+[0m17:13:27.749465 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:13:27.751339 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:13:27.751750 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+alter table "dbt_database"."public"."model__dbt_tmp" rename to "model"
+[0m17:13:27.752489 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:13:27.763084 [debug] [Thread-1  ]: On model.bdst_dbt.model: COMMIT
+[0m17:13:27.763527 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:13:27.763891 [debug] [Thread-1  ]: On model.bdst_dbt.model: COMMIT
+[0m17:13:27.765418 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:13:27.769304 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."model__dbt_backup"
+[0m17:13:27.771930 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:13:27.772281 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+drop view if exists "dbt_database"."public"."model__dbt_backup" cascade
+[0m17:13:27.773719 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.001 seconds
+[0m17:13:27.775243 [debug] [Thread-1  ]: On model.bdst_dbt.model: Close
+[0m17:13:27.775771 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f78593b8-bd48-4847-b723-33130d0dfe3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b17d9a0>]}
+[0m17:13:27.776288 [info ] [Thread-1  ]: 5 of 8 OK created sql view model public.model .................................. [[32mCREATE VIEW[0m in 0.05s]
+[0m17:13:27.776872 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.model
+[0m17:13:27.777265 [debug] [Thread-1  ]: Began running node model.bdst_dbt.mcdm
+[0m17:13:27.777635 [info ] [Thread-1  ]: 6 of 8 SKIP relation public.mcdm ............................................... [[33mSKIP[0m]
+[0m17:13:27.778113 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.mcdm
+[0m17:13:27.778757 [debug] [Thread-1  ]: Began running node model.bdst_dbt.mcdm_with_metrics
+[0m17:13:27.779212 [info ] [Thread-1  ]: 7 of 8 SKIP relation public.mcdm_with_metrics .................................. [[33mSKIP[0m]
+[0m17:13:27.779664 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.mcdm_with_metrics
+[0m17:13:27.780235 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_bacis_performance
+[0m17:13:27.780579 [info ] [Thread-1  ]: 8 of 8 SKIP relation public.ads_bacis_performance .............................. [[33mSKIP[0m]
+[0m17:13:27.781105 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_bacis_performance
+[0m17:13:27.781904 [debug] [MainThread]: Using postgres connection "master"
+[0m17:13:27.782204 [debug] [MainThread]: On master: BEGIN
+[0m17:13:27.782475 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:13:27.786413 [debug] [MainThread]: SQL status: BEGIN in 0.004 seconds
+[0m17:13:27.786817 [debug] [MainThread]: On master: COMMIT
+[0m17:13:27.787096 [debug] [MainThread]: Using postgres connection "master"
+[0m17:13:27.787388 [debug] [MainThread]: On master: COMMIT
+[0m17:13:27.787946 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:13:27.788249 [debug] [MainThread]: On master: Close
+[0m17:13:27.788740 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:13:27.789181 [debug] [MainThread]: Connection 'model.bdst_dbt.model' was properly closed.
+[0m17:13:27.789517 [info ] [MainThread]: 
+[0m17:13:27.789869 [info ] [MainThread]: Finished running 8 view models in 0 hours 0 minutes and 0.26 seconds (0.26s).
+[0m17:13:27.790906 [debug] [MainThread]: Command end result
+[0m17:13:27.832144 [info ] [MainThread]: 
+[0m17:13:27.832684 [info ] [MainThread]: [31mCompleted with 4 errors and 0 warnings:[0m
+[0m17:13:27.833058 [info ] [MainThread]: 
+[0m17:13:27.833506 [error] [MainThread]:   Database Error in model ads_bing (models/staging/ads_bing.sql)
+  cross-database references are not implemented: "db.public.source_ads_bing"
+  LINE 34:     FROM "db"."public"."source_ads_bing"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_bing.sql
+[0m17:13:27.833852 [info ] [MainThread]: 
+[0m17:13:27.834214 [error] [MainThread]:   Database Error in model ads_facebook (models/staging/ads_facebook.sql)
+  cross-database references are not implemented: "db.public.source_ads_facebook"
+  LINE 34:     FROM "db"."public"."source_ads_facebook"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_facebook.sql
+[0m17:13:27.834537 [info ] [MainThread]: 
+[0m17:13:27.834960 [error] [MainThread]:   Database Error in model ads_tiktok (models/staging/ads_tiktok.sql)
+  cross-database references are not implemented: "db.public.source_ads_tiktok"
+  LINE 34:     FROM "db"."public"."source_ads_tiktok"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_tiktok.sql
+[0m17:13:27.835268 [info ] [MainThread]: 
+[0m17:13:27.835636 [error] [MainThread]:   Database Error in model ads_twitter (models/staging/ads_twitter.sql)
+  cross-database references are not implemented: "db.public.source_ads_twitter"
+  LINE 34:     FROM "db"."public"."source_ads_twitter"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_twitter.sql
+[0m17:13:27.835981 [info ] [MainThread]: 
+[0m17:13:27.836360 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=4 SKIP=3 TOTAL=8
+[0m17:13:27.837135 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.5990956, "process_user_time": 2.019815, "process_kernel_time": 0.353065, "process_mem_max_rss": "111960", "process_in_blocks": "608", "command_success": false, "process_out_blocks": "0"}
+[0m17:13:27.837649 [debug] [MainThread]: Command `dbt run` failed at 17:13:27.837579 after 1.60 seconds
+[0m17:13:27.838185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b306b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8360c730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b18c2b0>]}
+[0m17:13:27.838630 [debug] [MainThread]: Flushing usage events
+[0m17:14:28.181556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83d46af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff821f1a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff821f19d0>]}
+
+
+============================== 17:14:28.184685 | d4dd1047-ce92-412d-84c5-e4a1c8ee0560 ==============================
+[0m17:14:28.184685 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:14:28.185628 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/dbt/bdst_dbt/logs', 'profiles_dir': '/dbt/bdst_dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:14:28.277247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83bcb190>]}
+[0m17:14:28.307528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8170c0a0>]}
+[0m17:14:28.308481 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m17:14:28.320344 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m17:14:28.402650 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:14:28.403500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff82ef8a00>]}
+[0m17:14:29.019024 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m17:14:29.019853 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff815f20a0>]}
+[0m17:14:29.288996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff5fe54130>]}
+[0m17:14:29.429478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff801069a0>]}
+[0m17:14:29.430084 [info ] [MainThread]: Found 8 models, 4 seeds, 100 data tests, 4 sources, 423 macros
+[0m17:14:29.430645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff5fd92d30>]}
+[0m17:14:29.432958 [info ] [MainThread]: 
+[0m17:14:29.433645 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:14:29.437223 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_database'
+[0m17:14:29.469135 [debug] [ThreadPool]: Using postgres connection "list_dbt_database"
+[0m17:14:29.469706 [debug] [ThreadPool]: On list_dbt_database: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "list_dbt_database"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:14:29.470090 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:14:29.480600 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.010 seconds
+[0m17:14:29.481704 [debug] [ThreadPool]: On list_dbt_database: Close
+[0m17:14:29.483465 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbt_database, now list_dbt_database_public)
+[0m17:14:29.487556 [debug] [ThreadPool]: Using postgres connection "list_dbt_database_public"
+[0m17:14:29.487956 [debug] [ThreadPool]: On list_dbt_database_public: BEGIN
+[0m17:14:29.488283 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:14:29.493471 [debug] [ThreadPool]: SQL status: BEGIN in 0.005 seconds
+[0m17:14:29.493941 [debug] [ThreadPool]: Using postgres connection "list_dbt_database_public"
+[0m17:14:29.494320 [debug] [ThreadPool]: On list_dbt_database_public: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "list_dbt_database_public"} */
+select
+      'dbt_database' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_database' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_database' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:14:29.497426 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.003 seconds
+[0m17:14:29.498521 [debug] [ThreadPool]: On list_dbt_database_public: ROLLBACK
+[0m17:14:29.499030 [debug] [ThreadPool]: On list_dbt_database_public: Close
+[0m17:14:29.503308 [debug] [MainThread]: Using postgres connection "master"
+[0m17:14:29.503763 [debug] [MainThread]: On master: BEGIN
+[0m17:14:29.504059 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:14:29.508811 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m17:14:29.509226 [debug] [MainThread]: Using postgres connection "master"
+[0m17:14:29.509577 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m17:14:29.513012 [debug] [MainThread]: SQL status: SELECT 0 in 0.003 seconds
+[0m17:14:29.514000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff5ff495b0>]}
+[0m17:14:29.514578 [debug] [MainThread]: On master: ROLLBACK
+[0m17:14:29.515040 [debug] [MainThread]: Using postgres connection "master"
+[0m17:14:29.515395 [debug] [MainThread]: On master: BEGIN
+[0m17:14:29.515897 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m17:14:29.516280 [debug] [MainThread]: On master: COMMIT
+[0m17:14:29.516582 [debug] [MainThread]: Using postgres connection "master"
+[0m17:14:29.516883 [debug] [MainThread]: On master: COMMIT
+[0m17:14:29.517306 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:14:29.517601 [debug] [MainThread]: On master: Close
+[0m17:14:29.518025 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:14:29.518574 [info ] [MainThread]: 
+[0m17:14:29.520808 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_bing
+[0m17:14:29.521489 [info ] [Thread-1  ]: 1 of 8 START sql table model public.ads_bing ................................... [RUN]
+[0m17:14:29.522080 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dbt_database_public, now model.bdst_dbt.ads_bing)
+[0m17:14:29.522478 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_bing
+[0m17:14:29.529443 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_bing"
+[0m17:14:29.531285 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_bing
+[0m17:14:29.555149 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_bing"
+[0m17:14:29.556687 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bing"
+[0m17:14:29.557054 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: BEGIN
+[0m17:14:29.557421 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:14:29.562029 [debug] [Thread-1  ]: SQL status: BEGIN in 0.005 seconds
+[0m17:14:29.562450 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bing"
+[0m17:14:29.562813 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_bing"} */
+
+  
+    
+
+  create  table "dbt_database"."public"."ads_bing__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH bing AS (
+    SELECT
+        ad_id,
+        0 AS add_to_cart,
+        adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        0 AS comments,
+        0 AS creative_id,
+        date,
+        clicks + conv + imps + revenue AS engagements,
+        imps AS impressions,
+        0 AS installs,
+        0 AS likes,
+        0 AS link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        0 AS purchase,
+        0 AS registrations,
+        revenue,
+        0 AS shares,
+        spend,
+        conv AS conversions,
+        0 AS video_views
+    FROM "db"."public"."source_ads_bing"
+)
+
+SELECT * FROM bing
+  );
+  
+[0m17:14:29.563611 [debug] [Thread-1  ]: Postgres adapter: Postgres error: cross-database references are not implemented: "db.public.source_ads_bing"
+LINE 39:     FROM "db"."public"."source_ads_bing"
+                  ^
+
+[0m17:14:29.564160 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: ROLLBACK
+[0m17:14:29.564680 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: Close
+[0m17:14:29.566468 [debug] [Thread-1  ]: Database Error in model ads_bing (models/staging/ads_bing.sql)
+  cross-database references are not implemented: "db.public.source_ads_bing"
+  LINE 39:     FROM "db"."public"."source_ads_bing"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_bing.sql
+[0m17:14:29.567642 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81384a30>]}
+[0m17:14:29.568457 [error] [Thread-1  ]: 1 of 8 ERROR creating sql table model public.ads_bing .......................... [[31mERROR[0m in 0.04s]
+[0m17:14:29.569329 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_bing
+[0m17:14:29.569840 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_facebook
+[0m17:14:29.570416 [info ] [Thread-1  ]: 2 of 8 START sql table model public.ads_facebook ............................... [RUN]
+[0m17:14:29.570896 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_bing, now model.bdst_dbt.ads_facebook)
+[0m17:14:29.571296 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_facebook
+[0m17:14:29.573583 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_facebook"
+[0m17:14:29.574995 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_facebook
+[0m17:14:29.578384 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_facebook"
+[0m17:14:29.579447 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_facebook"
+[0m17:14:29.579885 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: BEGIN
+[0m17:14:29.580276 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:14:29.585089 [debug] [Thread-1  ]: SQL status: BEGIN in 0.005 seconds
+[0m17:14:29.585662 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_facebook"
+[0m17:14:29.586193 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_facebook"} */
+
+  
+    
+
+  create  table "dbt_database"."public"."ads_facebook__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH ads_facebook AS (
+    SELECT
+        ad_id,
+        add_to_cart,
+        adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        comments,
+        creative_id,
+        date,
+        clicks + comments + likes + shares + views + purchase + complete_registration AS engagements,
+        impressions,
+        0 AS installs,
+        likes,
+        inline_link_clicks as link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        purchase,
+        complete_registration AS registrations,
+        purchase_value AS revenue,
+        shares,
+        spend,
+        purchase AS conversions,
+        views AS video_views
+    FROM "db"."public"."source_ads_facebook"
+)
+
+SELECT * FROM ads_facebook
+  );
+  
+[0m17:14:29.586872 [debug] [Thread-1  ]: Postgres adapter: Postgres error: cross-database references are not implemented: "db.public.source_ads_facebook"
+LINE 39:     FROM "db"."public"."source_ads_facebook"
+                  ^
+
+[0m17:14:29.587278 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: ROLLBACK
+[0m17:14:29.587736 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: Close
+[0m17:14:29.588566 [debug] [Thread-1  ]: Database Error in model ads_facebook (models/staging/ads_facebook.sql)
+  cross-database references are not implemented: "db.public.source_ads_facebook"
+  LINE 39:     FROM "db"."public"."source_ads_facebook"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_facebook.sql
+[0m17:14:29.589096 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff5da322b0>]}
+[0m17:14:29.589772 [error] [Thread-1  ]: 2 of 8 ERROR creating sql table model public.ads_facebook ...................... [[31mERROR[0m in 0.02s]
+[0m17:14:29.590467 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_facebook
+[0m17:14:29.590939 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_tiktok
+[0m17:14:29.591464 [info ] [Thread-1  ]: 3 of 8 START sql table model public.ads_tiktok ................................. [RUN]
+[0m17:14:29.591957 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_facebook, now model.bdst_dbt.ads_tiktok)
+[0m17:14:29.592367 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_tiktok
+[0m17:14:29.594742 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_tiktok"
+[0m17:14:29.596305 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_tiktok
+[0m17:14:29.598770 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_tiktok"
+[0m17:14:29.599906 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_tiktok"
+[0m17:14:29.600330 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: BEGIN
+[0m17:14:29.600659 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:14:29.605162 [debug] [Thread-1  ]: SQL status: BEGIN in 0.004 seconds
+[0m17:14:29.605601 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_tiktok"
+[0m17:14:29.605985 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_tiktok"} */
+
+  
+    
+
+  create  table "dbt_database"."public"."ads_tiktok__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH tiktok AS (
+    SELECT
+        ad_id,
+        0 AS add_to_cart,
+        0 AS adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        0 AS comments,
+        0 AS creative_id,
+        date,
+        clicks + add_to_cart + purchase + registrations + video_views AS engagements,
+        impressions,
+        0 AS installs,
+        0 AS likes,
+        0 AS link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        purchase,
+        registrations,
+        0 AS revenue,
+        0 AS shares,
+        spend,
+        conversions,
+        video_views
+    FROM "db"."public"."source_ads_tiktok"
+)
+
+SELECT * FROM tiktok
+  );
+  
+[0m17:14:29.606545 [debug] [Thread-1  ]: Postgres adapter: Postgres error: cross-database references are not implemented: "db.public.source_ads_tiktok"
+LINE 39:     FROM "db"."public"."source_ads_tiktok"
+                  ^
+
+[0m17:14:29.606873 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: ROLLBACK
+[0m17:14:29.607321 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: Close
+[0m17:14:29.608214 [debug] [Thread-1  ]: Database Error in model ads_tiktok (models/staging/ads_tiktok.sql)
+  cross-database references are not implemented: "db.public.source_ads_tiktok"
+  LINE 39:     FROM "db"."public"."source_ads_tiktok"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_tiktok.sql
+[0m17:14:29.608803 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff5da32700>]}
+[0m17:14:29.609460 [error] [Thread-1  ]: 3 of 8 ERROR creating sql table model public.ads_tiktok ........................ [[31mERROR[0m in 0.02s]
+[0m17:14:29.610052 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_tiktok
+[0m17:14:29.610502 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_twitter
+[0m17:14:29.611006 [info ] [Thread-1  ]: 4 of 8 START sql table model public.ads_twitter ................................ [RUN]
+[0m17:14:29.611615 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_tiktok, now model.bdst_dbt.ads_twitter)
+[0m17:14:29.612046 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_twitter
+[0m17:14:29.614519 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_twitter"
+[0m17:14:29.616052 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_twitter
+[0m17:14:29.618844 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_twitter"
+[0m17:14:29.619760 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_twitter"
+[0m17:14:29.620089 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: BEGIN
+[0m17:14:29.620396 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:14:29.625088 [debug] [Thread-1  ]: SQL status: BEGIN in 0.005 seconds
+[0m17:14:29.625578 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_twitter"
+[0m17:14:29.625922 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_twitter"} */
+
+  
+    
+
+  create  table "dbt_database"."public"."ads_twitter__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH twitter AS (
+    SELECT
+        0 AS ad_id,
+        0 AS add_to_cart,
+        0 AS adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        comments,
+        0 AS creative_id,
+        date,
+        engagements,
+        impressions,
+        0 AS installs,
+        likes,
+        0 AS link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        0 AS purchase,
+        0 AS registrations,
+        0 AS revenue,
+        0 AS shares,
+        spend,
+        engagements AS conversions,
+        video_total_views AS video_views
+    FROM "db"."public"."source_ads_twitter"
+)
+
+SELECT * FROM twitter
+  );
+  
+[0m17:14:29.626529 [debug] [Thread-1  ]: Postgres adapter: Postgres error: cross-database references are not implemented: "db.public.source_ads_twitter"
+LINE 39:     FROM "db"."public"."source_ads_twitter"
+                  ^
+
+[0m17:14:29.626975 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: ROLLBACK
+[0m17:14:29.627872 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: Close
+[0m17:14:29.628799 [debug] [Thread-1  ]: Database Error in model ads_twitter (models/staging/ads_twitter.sql)
+  cross-database references are not implemented: "db.public.source_ads_twitter"
+  LINE 39:     FROM "db"."public"."source_ads_twitter"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_twitter.sql
+[0m17:14:29.629385 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff5da328b0>]}
+[0m17:14:29.630058 [error] [Thread-1  ]: 4 of 8 ERROR creating sql table model public.ads_twitter ....................... [[31mERROR[0m in 0.02s]
+[0m17:14:29.630708 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_twitter
+[0m17:14:29.631201 [debug] [Thread-1  ]: Began running node model.bdst_dbt.model
+[0m17:14:29.631780 [info ] [Thread-1  ]: 5 of 8 START sql view model public.model ....................................... [RUN]
+[0m17:14:29.632420 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_twitter, now model.bdst_dbt.model)
+[0m17:14:29.632809 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.model
+[0m17:14:29.634394 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.model"
+[0m17:14:29.635542 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.model
+[0m17:14:29.648200 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.model"
+[0m17:14:29.649603 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:14:29.650035 [debug] [Thread-1  ]: On model.bdst_dbt.model: BEGIN
+[0m17:14:29.650457 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:14:29.654935 [debug] [Thread-1  ]: SQL status: BEGIN in 0.004 seconds
+[0m17:14:29.655358 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:14:29.655733 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+
+  create view "dbt_database"."public"."model__dbt_tmp"
+    
+    
+  as (
+    -- models/example_model.sql
+SELECT 1 AS example_column
+  );
+[0m17:14:29.657610 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.002 seconds
+[0m17:14:29.662261 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:14:29.662796 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+alter table "dbt_database"."public"."model" rename to "model__dbt_backup"
+[0m17:14:29.663579 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:14:29.665818 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:14:29.666196 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+alter table "dbt_database"."public"."model__dbt_tmp" rename to "model"
+[0m17:14:29.666736 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:14:29.676711 [debug] [Thread-1  ]: On model.bdst_dbt.model: COMMIT
+[0m17:14:29.677253 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:14:29.677650 [debug] [Thread-1  ]: On model.bdst_dbt.model: COMMIT
+[0m17:14:29.679229 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:14:29.683398 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."model__dbt_backup"
+[0m17:14:29.686117 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:14:29.686513 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+drop view if exists "dbt_database"."public"."model__dbt_backup" cascade
+[0m17:14:29.687721 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.001 seconds
+[0m17:14:29.689393 [debug] [Thread-1  ]: On model.bdst_dbt.model: Close
+[0m17:14:29.689935 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd4dd1047-ce92-412d-84c5-e4a1c8ee0560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83bbc940>]}
+[0m17:14:29.690505 [info ] [Thread-1  ]: 5 of 8 OK created sql view model public.model .................................. [[32mCREATE VIEW[0m in 0.06s]
+[0m17:14:29.691059 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.model
+[0m17:14:29.691583 [debug] [Thread-1  ]: Began running node model.bdst_dbt.mcdm
+[0m17:14:29.691988 [info ] [Thread-1  ]: 6 of 8 SKIP relation public.mcdm ............................................... [[33mSKIP[0m]
+[0m17:14:29.692472 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.mcdm
+[0m17:14:29.693105 [debug] [Thread-1  ]: Began running node model.bdst_dbt.mcdm_with_metrics
+[0m17:14:29.693557 [info ] [Thread-1  ]: 7 of 8 SKIP relation public.mcdm_with_metrics .................................. [[33mSKIP[0m]
+[0m17:14:29.693978 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.mcdm_with_metrics
+[0m17:14:29.694609 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_bacis_performance
+[0m17:14:29.694925 [info ] [Thread-1  ]: 8 of 8 SKIP relation public.ads_bacis_performance .............................. [[33mSKIP[0m]
+[0m17:14:29.695387 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_bacis_performance
+[0m17:14:29.696256 [debug] [MainThread]: Using postgres connection "master"
+[0m17:14:29.696562 [debug] [MainThread]: On master: BEGIN
+[0m17:14:29.696899 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:14:29.701610 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m17:14:29.702105 [debug] [MainThread]: On master: COMMIT
+[0m17:14:29.702497 [debug] [MainThread]: Using postgres connection "master"
+[0m17:14:29.702786 [debug] [MainThread]: On master: COMMIT
+[0m17:14:29.703279 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:14:29.703676 [debug] [MainThread]: On master: Close
+[0m17:14:29.704136 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:14:29.704429 [debug] [MainThread]: Connection 'model.bdst_dbt.model' was properly closed.
+[0m17:14:29.704885 [info ] [MainThread]: 
+[0m17:14:29.705327 [info ] [MainThread]: Finished running 4 table models, 4 view models in 0 hours 0 minutes and 0.27 seconds (0.27s).
+[0m17:14:29.706331 [debug] [MainThread]: Command end result
+[0m17:14:29.753094 [info ] [MainThread]: 
+[0m17:14:29.753663 [info ] [MainThread]: [31mCompleted with 4 errors and 0 warnings:[0m
+[0m17:14:29.754115 [info ] [MainThread]: 
+[0m17:14:29.754725 [error] [MainThread]:   Database Error in model ads_bing (models/staging/ads_bing.sql)
+  cross-database references are not implemented: "db.public.source_ads_bing"
+  LINE 39:     FROM "db"."public"."source_ads_bing"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_bing.sql
+[0m17:14:29.755173 [info ] [MainThread]: 
+[0m17:14:29.755613 [error] [MainThread]:   Database Error in model ads_facebook (models/staging/ads_facebook.sql)
+  cross-database references are not implemented: "db.public.source_ads_facebook"
+  LINE 39:     FROM "db"."public"."source_ads_facebook"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_facebook.sql
+[0m17:14:29.756038 [info ] [MainThread]: 
+[0m17:14:29.756549 [error] [MainThread]:   Database Error in model ads_tiktok (models/staging/ads_tiktok.sql)
+  cross-database references are not implemented: "db.public.source_ads_tiktok"
+  LINE 39:     FROM "db"."public"."source_ads_tiktok"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_tiktok.sql
+[0m17:14:29.756934 [info ] [MainThread]: 
+[0m17:14:29.757347 [error] [MainThread]:   Database Error in model ads_twitter (models/staging/ads_twitter.sql)
+  cross-database references are not implemented: "db.public.source_ads_twitter"
+  LINE 39:     FROM "db"."public"."source_ads_twitter"
+                    ^
+  compiled code at target/run/bdst_dbt/models/staging/ads_twitter.sql
+[0m17:14:29.757771 [info ] [MainThread]: 
+[0m17:14:29.758252 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=4 SKIP=3 TOTAL=8
+[0m17:14:29.759435 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.6117462, "process_user_time": 2.033726, "process_kernel_time": 0.27123, "process_mem_max_rss": "113516", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:14:29.760272 [debug] [MainThread]: Command `dbt run` failed at 17:14:29.760189 after 1.61 seconds
+[0m17:14:29.760792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83d46af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff801d1d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff800965b0>]}
+[0m17:14:29.761311 [debug] [MainThread]: Flushing usage events
+[0m17:15:20.259368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9d136b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9d38a3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9d38ac70>]}
+
+
+============================== 17:15:20.262478 | 1f606a3c-ab1e-4895-bd30-a69d7d5c1239 ==============================
+[0m17:15:20.262478 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:15:20.263265 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/dbt/bdst_dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/dbt/bdst_dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:15:20.355048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b6346a0>]}
+[0m17:15:20.383502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b62bca0>]}
+[0m17:15:20.384249 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m17:15:20.394620 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m17:15:20.524241 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m17:15:20.525779 [debug] [MainThread]: Partial parsing: updated file: bdst_dbt://models/_ads_sources.yml
+[0m17:15:20.658932 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m17:15:20.659782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a73ddc0>]}
+[0m17:15:20.948857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a788940>]}
+[0m17:15:21.049956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a7e6520>]}
+[0m17:15:21.050475 [info ] [MainThread]: Found 8 models, 4 seeds, 100 data tests, 4 sources, 423 macros
+[0m17:15:21.050866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a9e2b20>]}
+[0m17:15:21.053040 [info ] [MainThread]: 
+[0m17:15:21.053711 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:15:21.057124 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_database'
+[0m17:15:21.088442 [debug] [ThreadPool]: Using postgres connection "list_dbt_database"
+[0m17:15:21.089048 [debug] [ThreadPool]: On list_dbt_database: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "list_dbt_database"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:15:21.089387 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:15:21.100755 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.011 seconds
+[0m17:15:21.101800 [debug] [ThreadPool]: On list_dbt_database: Close
+[0m17:15:21.104021 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbt_database, now list_dbt_database_public)
+[0m17:15:21.108267 [debug] [ThreadPool]: Using postgres connection "list_dbt_database_public"
+[0m17:15:21.108671 [debug] [ThreadPool]: On list_dbt_database_public: BEGIN
+[0m17:15:21.108984 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:15:21.114067 [debug] [ThreadPool]: SQL status: BEGIN in 0.005 seconds
+[0m17:15:21.114560 [debug] [ThreadPool]: Using postgres connection "list_dbt_database_public"
+[0m17:15:21.114882 [debug] [ThreadPool]: On list_dbt_database_public: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "list_dbt_database_public"} */
+select
+      'dbt_database' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_database' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt_database' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:15:21.117963 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.003 seconds
+[0m17:15:21.118885 [debug] [ThreadPool]: On list_dbt_database_public: ROLLBACK
+[0m17:15:21.119342 [debug] [ThreadPool]: On list_dbt_database_public: Close
+[0m17:15:21.122977 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:21.123387 [debug] [MainThread]: On master: BEGIN
+[0m17:15:21.123681 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:15:21.127552 [debug] [MainThread]: SQL status: BEGIN in 0.004 seconds
+[0m17:15:21.127921 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:21.128260 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m17:15:21.131223 [debug] [MainThread]: SQL status: SELECT 0 in 0.003 seconds
+[0m17:15:21.132581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b94fe80>]}
+[0m17:15:21.133114 [debug] [MainThread]: On master: ROLLBACK
+[0m17:15:21.133568 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:21.133879 [debug] [MainThread]: On master: BEGIN
+[0m17:15:21.134417 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m17:15:21.134734 [debug] [MainThread]: On master: COMMIT
+[0m17:15:21.135027 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:21.135313 [debug] [MainThread]: On master: COMMIT
+[0m17:15:21.135676 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:15:21.135995 [debug] [MainThread]: On master: Close
+[0m17:15:21.136439 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:15:21.136961 [info ] [MainThread]: 
+[0m17:15:21.139061 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_bing
+[0m17:15:21.139618 [info ] [Thread-1  ]: 1 of 8 START sql table model public.ads_bing ................................... [RUN]
+[0m17:15:21.140160 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dbt_database_public, now model.bdst_dbt.ads_bing)
+[0m17:15:21.140579 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_bing
+[0m17:15:21.146244 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_bing"
+[0m17:15:21.147729 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_bing
+[0m17:15:21.171054 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_bing"
+[0m17:15:21.172780 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bing"
+[0m17:15:21.173144 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: BEGIN
+[0m17:15:21.173481 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:15:21.178077 [debug] [Thread-1  ]: SQL status: BEGIN in 0.005 seconds
+[0m17:15:21.178444 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bing"
+[0m17:15:21.178783 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_bing"} */
+
+  
+    
+
+  create  table "dbt_database"."public"."ads_bing__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH bing AS (
+    SELECT
+        ad_id,
+        0 AS add_to_cart,
+        adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        0 AS comments,
+        0 AS creative_id,
+        date,
+        clicks + conv + imps + revenue AS engagements,
+        imps AS impressions,
+        0 AS installs,
+        0 AS likes,
+        0 AS link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        0 AS purchase,
+        0 AS registrations,
+        revenue,
+        0 AS shares,
+        spend,
+        conv AS conversions,
+        0 AS video_views
+    FROM "dbt_database"."public"."source_ads_bing"
+)
+
+SELECT * FROM bing
+  );
+  
+[0m17:15:21.185466 [debug] [Thread-1  ]: SQL status: SELECT 1546 in 0.006 seconds
+[0m17:15:21.189674 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bing"
+[0m17:15:21.190054 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_bing"} */
+alter table "dbt_database"."public"."ads_bing__dbt_tmp" rename to "ads_bing"
+[0m17:15:21.190603 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:21.200843 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: COMMIT
+[0m17:15:21.201353 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bing"
+[0m17:15:21.201733 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: COMMIT
+[0m17:15:21.202957 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:21.206771 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."ads_bing__dbt_backup"
+[0m17:15:21.209940 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bing"
+[0m17:15:21.210376 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_bing"} */
+drop table if exists "dbt_database"."public"."ads_bing__dbt_backup" cascade
+[0m17:15:21.210920 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.000 seconds
+[0m17:15:21.212403 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bing: Close
+[0m17:15:21.213492 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9cfad9d0>]}
+[0m17:15:21.214089 [info ] [Thread-1  ]: 1 of 8 OK created sql table model public.ads_bing .............................. [[32mSELECT 1546[0m in 0.07s]
+[0m17:15:21.214698 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_bing
+[0m17:15:21.215153 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_facebook
+[0m17:15:21.215650 [info ] [Thread-1  ]: 2 of 8 START sql table model public.ads_facebook ............................... [RUN]
+[0m17:15:21.216156 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_bing, now model.bdst_dbt.ads_facebook)
+[0m17:15:21.216520 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_facebook
+[0m17:15:21.218609 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_facebook"
+[0m17:15:21.219932 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_facebook
+[0m17:15:21.222245 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_facebook"
+[0m17:15:21.223091 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_facebook"
+[0m17:15:21.223397 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: BEGIN
+[0m17:15:21.223684 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:15:21.228303 [debug] [Thread-1  ]: SQL status: BEGIN in 0.005 seconds
+[0m17:15:21.228790 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_facebook"
+[0m17:15:21.229132 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_facebook"} */
+
+  
+    
+
+  create  table "dbt_database"."public"."ads_facebook__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH ads_facebook AS (
+    SELECT
+        ad_id,
+        add_to_cart,
+        adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        comments,
+        creative_id,
+        date,
+        clicks + comments + likes + shares + views + purchase + complete_registration AS engagements,
+        impressions,
+        0 AS installs,
+        likes,
+        inline_link_clicks as link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        purchase,
+        complete_registration AS registrations,
+        purchase_value AS revenue,
+        shares,
+        spend,
+        purchase AS conversions,
+        views AS video_views
+    FROM "dbt_database"."public"."source_ads_facebook"
+)
+
+SELECT * FROM ads_facebook
+  );
+  
+[0m17:15:21.236243 [debug] [Thread-1  ]: SQL status: SELECT 3212 in 0.007 seconds
+[0m17:15:21.238482 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_facebook"
+[0m17:15:21.238991 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_facebook"} */
+alter table "dbt_database"."public"."ads_facebook__dbt_tmp" rename to "ads_facebook"
+[0m17:15:21.239705 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:21.240766 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: COMMIT
+[0m17:15:21.241192 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_facebook"
+[0m17:15:21.241645 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: COMMIT
+[0m17:15:21.243390 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:21.245102 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."ads_facebook__dbt_backup"
+[0m17:15:21.245587 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_facebook"
+[0m17:15:21.245935 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_facebook"} */
+drop table if exists "dbt_database"."public"."ads_facebook__dbt_backup" cascade
+[0m17:15:21.246392 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.000 seconds
+[0m17:15:21.247289 [debug] [Thread-1  ]: On model.bdst_dbt.ads_facebook: Close
+[0m17:15:21.247773 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98889be0>]}
+[0m17:15:21.248329 [info ] [Thread-1  ]: 2 of 8 OK created sql table model public.ads_facebook .......................... [[32mSELECT 3212[0m in 0.03s]
+[0m17:15:21.248923 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_facebook
+[0m17:15:21.249344 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_tiktok
+[0m17:15:21.249827 [info ] [Thread-1  ]: 3 of 8 START sql table model public.ads_tiktok ................................. [RUN]
+[0m17:15:21.250366 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_facebook, now model.bdst_dbt.ads_tiktok)
+[0m17:15:21.250741 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_tiktok
+[0m17:15:21.253028 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_tiktok"
+[0m17:15:21.254159 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_tiktok
+[0m17:15:21.256726 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_tiktok"
+[0m17:15:21.257560 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_tiktok"
+[0m17:15:21.257863 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: BEGIN
+[0m17:15:21.258156 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:15:21.262602 [debug] [Thread-1  ]: SQL status: BEGIN in 0.004 seconds
+[0m17:15:21.262967 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_tiktok"
+[0m17:15:21.263286 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_tiktok"} */
+
+  
+    
+
+  create  table "dbt_database"."public"."ads_tiktok__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH tiktok AS (
+    SELECT
+        ad_id,
+        0 AS add_to_cart,
+        0 AS adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        0 AS comments,
+        0 AS creative_id,
+        date,
+        clicks + add_to_cart + purchase + registrations + video_views AS engagements,
+        impressions,
+        0 AS installs,
+        0 AS likes,
+        0 AS link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        purchase,
+        registrations,
+        0 AS revenue,
+        0 AS shares,
+        spend,
+        conversions,
+        video_views
+    FROM "dbt_database"."public"."source_ads_tiktok"
+)
+
+SELECT * FROM tiktok
+  );
+  
+[0m17:15:21.269848 [debug] [Thread-1  ]: SQL status: SELECT 2345 in 0.006 seconds
+[0m17:15:21.273071 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_tiktok"
+[0m17:15:21.273427 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_tiktok"} */
+alter table "dbt_database"."public"."ads_tiktok__dbt_tmp" rename to "ads_tiktok"
+[0m17:15:21.273972 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:21.274894 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: COMMIT
+[0m17:15:21.275270 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_tiktok"
+[0m17:15:21.275571 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: COMMIT
+[0m17:15:21.276873 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:21.278464 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."ads_tiktok__dbt_backup"
+[0m17:15:21.278927 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_tiktok"
+[0m17:15:21.279230 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_tiktok"} */
+drop table if exists "dbt_database"."public"."ads_tiktok__dbt_backup" cascade
+[0m17:15:21.279642 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.000 seconds
+[0m17:15:21.280680 [debug] [Thread-1  ]: On model.bdst_dbt.ads_tiktok: Close
+[0m17:15:21.281262 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff92f857f0>]}
+[0m17:15:21.281794 [info ] [Thread-1  ]: 3 of 8 OK created sql table model public.ads_tiktok ............................ [[32mSELECT 2345[0m in 0.03s]
+[0m17:15:21.282463 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_tiktok
+[0m17:15:21.282877 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_twitter
+[0m17:15:21.283315 [info ] [Thread-1  ]: 4 of 8 START sql table model public.ads_twitter ................................ [RUN]
+[0m17:15:21.283760 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_tiktok, now model.bdst_dbt.ads_twitter)
+[0m17:15:21.284090 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_twitter
+[0m17:15:21.286152 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_twitter"
+[0m17:15:21.287073 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_twitter
+[0m17:15:21.289409 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_twitter"
+[0m17:15:21.290214 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_twitter"
+[0m17:15:21.290509 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: BEGIN
+[0m17:15:21.290794 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:15:21.294929 [debug] [Thread-1  ]: SQL status: BEGIN in 0.004 seconds
+[0m17:15:21.295315 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_twitter"
+[0m17:15:21.295673 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_twitter"} */
+
+  
+    
+
+  create  table "dbt_database"."public"."ads_twitter__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH twitter AS (
+    SELECT
+        0 AS ad_id,
+        0 AS add_to_cart,
+        0 AS adset_id,
+        campaign_id,
+        channel,
+        clicks,
+        comments,
+        0 AS creative_id,
+        date,
+        engagements,
+        impressions,
+        0 AS installs,
+        likes,
+        0 AS link_clicks,
+        0 AS placement_id,
+        0 AS post_click_conversions,
+        0 AS post_view_conversions,
+        0 AS posts,
+        0 AS purchase,
+        0 AS registrations,
+        0 AS revenue,
+        0 AS shares,
+        spend,
+        engagements AS conversions,
+        video_total_views AS video_views
+    FROM "dbt_database"."public"."source_ads_twitter"
+)
+
+SELECT * FROM twitter
+  );
+  
+[0m17:15:21.301619 [debug] [Thread-1  ]: SQL status: SELECT 3130 in 0.006 seconds
+[0m17:15:21.303895 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_twitter"
+[0m17:15:21.304253 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_twitter"} */
+alter table "dbt_database"."public"."ads_twitter__dbt_tmp" rename to "ads_twitter"
+[0m17:15:21.304872 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:21.305805 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: COMMIT
+[0m17:15:21.306144 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_twitter"
+[0m17:15:21.306439 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: COMMIT
+[0m17:15:21.308080 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:21.309642 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."ads_twitter__dbt_backup"
+[0m17:15:21.310132 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_twitter"
+[0m17:15:21.310431 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_twitter"} */
+drop table if exists "dbt_database"."public"."ads_twitter__dbt_backup" cascade
+[0m17:15:21.310830 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.000 seconds
+[0m17:15:21.311704 [debug] [Thread-1  ]: On model.bdst_dbt.ads_twitter: Close
+[0m17:15:21.312164 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a776970>]}
+[0m17:15:21.312658 [info ] [Thread-1  ]: 4 of 8 OK created sql table model public.ads_twitter ........................... [[32mSELECT 3130[0m in 0.03s]
+[0m17:15:21.313280 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_twitter
+[0m17:15:21.313719 [debug] [Thread-1  ]: Began running node model.bdst_dbt.model
+[0m17:15:21.314234 [info ] [Thread-1  ]: 5 of 8 START sql view model public.model ....................................... [RUN]
+[0m17:15:21.314764 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.ads_twitter, now model.bdst_dbt.model)
+[0m17:15:21.315112 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.model
+[0m17:15:21.316606 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.model"
+[0m17:15:21.317615 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.model
+[0m17:15:21.329660 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.model"
+[0m17:15:21.330923 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:15:21.331418 [debug] [Thread-1  ]: On model.bdst_dbt.model: BEGIN
+[0m17:15:21.331831 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:15:21.336370 [debug] [Thread-1  ]: SQL status: BEGIN in 0.004 seconds
+[0m17:15:21.336795 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:15:21.337126 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+
+  create view "dbt_database"."public"."model__dbt_tmp"
+    
+    
+  as (
+    -- models/example_model.sql
+SELECT 1 AS example_column
+  );
+[0m17:15:21.338465 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.001 seconds
+[0m17:15:21.340749 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:15:21.341163 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+alter table "dbt_database"."public"."model" rename to "model__dbt_backup"
+[0m17:15:21.341782 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:21.344083 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:15:21.344513 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+alter table "dbt_database"."public"."model__dbt_tmp" rename to "model"
+[0m17:15:21.345275 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:21.347641 [debug] [Thread-1  ]: On model.bdst_dbt.model: COMMIT
+[0m17:15:21.348185 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:15:21.348542 [debug] [Thread-1  ]: On model.bdst_dbt.model: COMMIT
+[0m17:15:21.349357 [debug] [Thread-1  ]: SQL status: COMMIT in 0.000 seconds
+[0m17:15:21.351091 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."model__dbt_backup"
+[0m17:15:21.352760 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.model"
+[0m17:15:21.353103 [debug] [Thread-1  ]: On model.bdst_dbt.model: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.model"} */
+drop view if exists "dbt_database"."public"."model__dbt_backup" cascade
+[0m17:15:21.354215 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.001 seconds
+[0m17:15:21.355180 [debug] [Thread-1  ]: On model.bdst_dbt.model: Close
+[0m17:15:21.355672 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a776970>]}
+[0m17:15:21.356182 [info ] [Thread-1  ]: 5 of 8 OK created sql view model public.model .................................. [[32mCREATE VIEW[0m in 0.04s]
+[0m17:15:21.356754 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.model
+[0m17:15:21.357154 [debug] [Thread-1  ]: Began running node model.bdst_dbt.mcdm
+[0m17:15:21.357573 [info ] [Thread-1  ]: 6 of 8 START sql view model public.mcdm ........................................ [RUN]
+[0m17:15:21.358035 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.model, now model.bdst_dbt.mcdm)
+[0m17:15:21.358377 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.mcdm
+[0m17:15:21.360686 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.mcdm"
+[0m17:15:21.361958 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.mcdm
+[0m17:15:21.364293 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.mcdm"
+[0m17:15:21.365383 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.mcdm"
+[0m17:15:21.365682 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm: BEGIN
+[0m17:15:21.365994 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:15:21.370498 [debug] [Thread-1  ]: SQL status: BEGIN in 0.004 seconds
+[0m17:15:21.371013 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.mcdm"
+[0m17:15:21.371348 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.mcdm"} */
+
+  create view "dbt_database"."public"."mcdm__dbt_tmp"
+    
+    
+  as (
+    WITH mcdm AS (
+    SELECT
+        *
+    FROM "dbt_database"."public"."ads_tiktok"
+
+    UNION ALL
+
+    SELECT
+        *
+    FROM "dbt_database"."public"."ads_facebook"
+
+    UNION ALL
+
+    SELECT
+        *
+    FROM "dbt_database"."public"."ads_twitter"
+
+    UNION ALL
+
+    SELECT
+        *
+    FROM "dbt_database"."public"."ads_bing"
+)
+
+SELECT * FROM mcdm
+  );
+[0m17:15:21.375803 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.004 seconds
+[0m17:15:21.378069 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.mcdm"
+[0m17:15:21.378398 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.mcdm"} */
+alter table "dbt_database"."public"."mcdm__dbt_tmp" rename to "mcdm"
+[0m17:15:21.379066 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:21.379963 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm: COMMIT
+[0m17:15:21.380272 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.mcdm"
+[0m17:15:21.380558 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm: COMMIT
+[0m17:15:21.381393 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:21.383714 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."mcdm__dbt_backup"
+[0m17:15:21.384199 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.mcdm"
+[0m17:15:21.384550 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.mcdm"} */
+drop view if exists "dbt_database"."public"."mcdm__dbt_backup" cascade
+[0m17:15:21.385035 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.000 seconds
+[0m17:15:21.385850 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm: Close
+[0m17:15:21.386316 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9a776970>]}
+[0m17:15:21.386796 [info ] [Thread-1  ]: 6 of 8 OK created sql view model public.mcdm ................................... [[32mCREATE VIEW[0m in 0.03s]
+[0m17:15:21.387434 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.mcdm
+[0m17:15:21.388192 [debug] [Thread-1  ]: Began running node model.bdst_dbt.mcdm_with_metrics
+[0m17:15:21.388630 [info ] [Thread-1  ]: 7 of 8 START sql view model public.mcdm_with_metrics ........................... [RUN]
+[0m17:15:21.389162 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.mcdm, now model.bdst_dbt.mcdm_with_metrics)
+[0m17:15:21.389485 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.mcdm_with_metrics
+[0m17:15:21.391437 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.mcdm_with_metrics"
+[0m17:15:21.392452 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.mcdm_with_metrics
+[0m17:15:21.394716 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.mcdm_with_metrics"
+[0m17:15:21.395876 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.mcdm_with_metrics"
+[0m17:15:21.396236 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm_with_metrics: BEGIN
+[0m17:15:21.396530 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:15:21.400971 [debug] [Thread-1  ]: SQL status: BEGIN in 0.004 seconds
+[0m17:15:21.401437 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.mcdm_with_metrics"
+[0m17:15:21.401752 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm_with_metrics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.mcdm_with_metrics"} */
+
+  create view "dbt_database"."public"."mcdm_with_metrics__dbt_tmp"
+    
+    
+  as (
+    select
+    channel,
+    round(sum(spend) / sum(engagements), 2) as engagement_cost,
+    round(sum(spend) / sum(conversions), 0) as conversion_cost,
+    sum(impressions) as impressions,
+    round(sum(spend) / sum(clicks), 2) as cpc
+from "dbt_database"."public"."mcdm"
+group by channel
+  );
+[0m17:15:21.404127 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.002 seconds
+[0m17:15:21.406560 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.mcdm_with_metrics"
+[0m17:15:21.406986 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm_with_metrics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.mcdm_with_metrics"} */
+alter table "dbt_database"."public"."mcdm_with_metrics__dbt_tmp" rename to "mcdm_with_metrics"
+[0m17:15:21.407554 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:21.408421 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm_with_metrics: COMMIT
+[0m17:15:21.408722 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.mcdm_with_metrics"
+[0m17:15:21.409029 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm_with_metrics: COMMIT
+[0m17:15:21.409641 [debug] [Thread-1  ]: SQL status: COMMIT in 0.000 seconds
+[0m17:15:21.411140 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."mcdm_with_metrics__dbt_backup"
+[0m17:15:21.411605 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.mcdm_with_metrics"
+[0m17:15:21.411901 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm_with_metrics: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.mcdm_with_metrics"} */
+drop view if exists "dbt_database"."public"."mcdm_with_metrics__dbt_backup" cascade
+[0m17:15:21.412372 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.000 seconds
+[0m17:15:21.413193 [debug] [Thread-1  ]: On model.bdst_dbt.mcdm_with_metrics: Close
+[0m17:15:21.413648 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff92f24370>]}
+[0m17:15:21.414138 [info ] [Thread-1  ]: 7 of 8 OK created sql view model public.mcdm_with_metrics ...................... [[32mCREATE VIEW[0m in 0.02s]
+[0m17:15:21.414671 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.mcdm_with_metrics
+[0m17:15:21.415256 [debug] [Thread-1  ]: Began running node model.bdst_dbt.ads_bacis_performance
+[0m17:15:21.415711 [info ] [Thread-1  ]: 8 of 8 START sql view model public.ads_bacis_performance ....................... [RUN]
+[0m17:15:21.416216 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bdst_dbt.mcdm_with_metrics, now model.bdst_dbt.ads_bacis_performance)
+[0m17:15:21.416537 [debug] [Thread-1  ]: Began compiling node model.bdst_dbt.ads_bacis_performance
+[0m17:15:21.418488 [debug] [Thread-1  ]: Writing injected SQL for node "model.bdst_dbt.ads_bacis_performance"
+[0m17:15:21.419747 [debug] [Thread-1  ]: Began executing node model.bdst_dbt.ads_bacis_performance
+[0m17:15:21.422127 [debug] [Thread-1  ]: Writing runtime sql for node "model.bdst_dbt.ads_bacis_performance"
+[0m17:15:21.423356 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bacis_performance"
+[0m17:15:21.423670 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bacis_performance: BEGIN
+[0m17:15:21.423966 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:15:21.427960 [debug] [Thread-1  ]: SQL status: BEGIN in 0.004 seconds
+[0m17:15:21.428296 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bacis_performance"
+[0m17:15:21.428592 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bacis_performance: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_bacis_performance"} */
+
+  create view "dbt_database"."public"."ads_bacis_performance__dbt_tmp"
+    
+    
+  as (
+    select * from "dbt_database"."public"."mcdm_with_metrics"
+  );
+[0m17:15:21.429676 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.001 seconds
+[0m17:15:21.467494 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bacis_performance"
+[0m17:15:21.468097 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bacis_performance: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_bacis_performance"} */
+alter table "dbt_database"."public"."ads_bacis_performance__dbt_tmp" rename to "ads_bacis_performance"
+[0m17:15:21.468796 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.000 seconds
+[0m17:15:21.469725 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bacis_performance: COMMIT
+[0m17:15:21.470072 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bacis_performance"
+[0m17:15:21.470386 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bacis_performance: COMMIT
+[0m17:15:21.471349 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:15:21.472995 [debug] [Thread-1  ]: Applying DROP to: "dbt_database"."public"."ads_bacis_performance__dbt_backup"
+[0m17:15:21.473479 [debug] [Thread-1  ]: Using postgres connection "model.bdst_dbt.ads_bacis_performance"
+[0m17:15:21.473830 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bacis_performance: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "bdst_dbt", "target_name": "dev", "node_id": "model.bdst_dbt.ads_bacis_performance"} */
+drop view if exists "dbt_database"."public"."ads_bacis_performance__dbt_backup" cascade
+[0m17:15:21.474355 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.000 seconds
+[0m17:15:21.475270 [debug] [Thread-1  ]: On model.bdst_dbt.ads_bacis_performance: Close
+[0m17:15:21.475727 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f606a3c-ab1e-4895-bd30-a69d7d5c1239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff92f04eb0>]}
+[0m17:15:21.476237 [info ] [Thread-1  ]: 8 of 8 OK created sql view model public.ads_bacis_performance .................. [[32mCREATE VIEW[0m in 0.06s]
+[0m17:15:21.476955 [debug] [Thread-1  ]: Finished running node model.bdst_dbt.ads_bacis_performance
+[0m17:15:21.478029 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:21.478361 [debug] [MainThread]: On master: BEGIN
+[0m17:15:21.478640 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:15:21.483191 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m17:15:21.483579 [debug] [MainThread]: On master: COMMIT
+[0m17:15:21.483889 [debug] [MainThread]: Using postgres connection "master"
+[0m17:15:21.484206 [debug] [MainThread]: On master: COMMIT
+[0m17:15:21.484590 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:15:21.484885 [debug] [MainThread]: On master: Close
+[0m17:15:21.485310 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:15:21.485610 [debug] [MainThread]: Connection 'model.bdst_dbt.ads_bacis_performance' was properly closed.
+[0m17:15:21.486006 [info ] [MainThread]: 
+[0m17:15:21.486451 [info ] [MainThread]: Finished running 4 table models, 4 view models in 0 hours 0 minutes and 0.43 seconds (0.43s).
+[0m17:15:21.487525 [debug] [MainThread]: Command end result
+[0m17:15:21.530490 [info ] [MainThread]: 
+[0m17:15:21.531100 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:15:21.531491 [info ] [MainThread]: 
+[0m17:15:21.531961 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m17:15:21.532843 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.3051846, "process_user_time": 1.716405, "process_kernel_time": 0.2563, "process_mem_max_rss": "111428", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:15:21.533361 [debug] [MainThread]: Command `dbt run` succeeded at 17:15:21.533302 after 1.31 seconds
+[0m17:15:21.533715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9d136b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9aa1de80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9ce9bd30>]}
+[0m17:15:21.534060 [debug] [MainThread]: Flushing usage events

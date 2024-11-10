@@ -1,0 +1,1 @@
+select * from "dbt_database"."public"."mcdm_with_metrics"

@@ -5,13 +5,13 @@ services:
     image: postgres:latest
     container_name: dbt_postgres_db
     environment:
-      POSTGRES_USER: db_user      # Замените на нужное имя пользователя
-      POSTGRES_PASSWORD: db_password  # Замените на нужный пароль
-      POSTGRES_DB: dbt_database   # Замените на нужное имя базы данных
+      POSTGRES_USER: db_user      
+      POSTGRES_PASSWORD: db_password  
+      POSTGRES_DB: dbt_database   
     ports:
-      - "5432:5432"               # Порт для подключения к PostgreSQL
+      - "5432:5432"               
     volumes:
-      - db_data:/var/lib/postgresql/data  # Хранение данных
+      - db_data:/var/lib/postgresql/data
 
   dbt:
     image: dbt-postgres

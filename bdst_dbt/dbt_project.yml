@@ -4,7 +4,14 @@ config-version: 2
 
 profile: 'bdst_dbt'
 
-model-paths: ["models"]  # Замените source-paths на model-paths
-target-path: "target"
+model-paths: ["models"]
+test-paths: ["tests"]
 clean-targets: ["target"]
 seed-paths: ["seeds"]
+
+target-path: "target"
+
+models:
+  bdst_dbt:
+    staging:
+      materialized: table
