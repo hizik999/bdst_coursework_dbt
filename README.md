@@ -11,10 +11,13 @@
 11. дальше настройка суперсета
 
 
-настройка superset (один раз)
+настройка superset (каждый раз)
 ```
 docker compose exec superset superset db upgrade
 docker compose exec superset superset fab create-admin --username admin --firstname Admin --lastname User --email admin@example.com --password admin
 docker compose exec superset superset init
 
 ```
+
+после этого в дата 
+postgresql://db_user:db_password@db:5432/dbt_database
