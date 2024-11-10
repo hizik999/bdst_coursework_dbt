@@ -1,15 +1,20 @@
-как установить dbt
-```bash
-pip install --upgrade dbt dbt-core dbt-postgres
-```
-
-
 1. сделал dwh (postgresql)
 2. установил dbt
 3. загрузил исходные данные seeds (source_...)
 4. сделал сруктуру моделей (по инмону) (staging, core, mart)
-5. написал staging файлы с обработкой
-6. написал core файлы с объединением данных и подсчетом метрик
-7. написал mart файл для витрины данных
-8. сделал конфиг sources (_ads_sources.yml)
+5. сделал конфиг sources (_ads_sources.yml)
+6. написал staging файлы с обработкой сырых данных (из seed)
+7. написал core файлы с объединением данных и подсчетом метрик
+8. написал mart файл для витрины данных
 9. написал тесты (schema.yml)
+10. запустил dbt build (run, test, seed, snapshot), dbt compile (генерирует sql, можно найти в target/compile)
+11. дальше настройка суперсета
+
+
+настройка superset (один раз)
+```
+docker compose exec superset superset db upgrade
+docker compose exec superset superset fab create-admin --username admin --firstname Admin --lastname User --email admin@example.com --password admin
+docker compose exec superset superset init
+
+```

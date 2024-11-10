@@ -25,6 +25,26 @@ services:
     command: tail -f /dev/null  # Запускает контейнер в режиме ожидания
     working_dir: /dbt/bdst_dbt
 
+  superset:
+    image: apache/superset
+    container_name: superset
+    environment:
+      SUPERSET_ENV: production
+      SUPERSET_LOAD_EXAMPLES: "no"
+      SUPERSET_USER: admin
+      SUPERSET_PASSWORD: admin
+      SUPERSET_EMAIL: admin@example.com
+    ports:
+      - "8088:8088"   # Порт Superset для доступа
+    volumes:
+      - ./superset_config.py:/app/pythonpath/superset_config.py
+    depends_on:
+      - db
+    networks:
+      - superset_network
+
+networks:
+  superset_network:
 
 
 volumes:
