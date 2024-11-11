@@ -10,6 +10,8 @@
 10. запустил dbt seed (run, test, seed, snapshot), dbt compile (генерирует sql, можно найти в target/compile)
 11. дальше настройка суперсета
 
+создать внутри shared_db схему для суперсета
+CREATE SCHEMA IF NOT EXISTS superset_schema;
 
 настройка superset (каждый раз)
 ```
@@ -19,5 +21,5 @@ docker compose exec superset superset init
 
 ```
 
-после этого в дата 
+после этого зайти в localhost:8088 в data -> connect data source выбрать ads_basic_performance 
 postgresql://db_user:db_password@db:5432/shared_db?options=-csearch_path%3Ddbt_schema
