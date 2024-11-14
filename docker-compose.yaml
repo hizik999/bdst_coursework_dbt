@@ -38,7 +38,6 @@ services:
       - "8088:8088"   # Порт Superset для доступа
     volumes:
       - ./superset_config.py:/app/pythonpath/superset_config.py
-      #- ./superset_home:/app/superset_home 
     depends_on:
       - db
     
