@@ -40,6 +40,10 @@ docker compose exec superset superset init
 10. После этого зайти по localhost:8088, далее "Data" справа сверху -> connect data source -> PostgreSQL -> postgresql://db_user:db_password@db:5432/shared_db?options=-csearch_path%3Ddbt_schema -> создать графики (выбирать датасетом таблицу ads_basic_performance) и вставить их в дашборд как на картинке
 ![alt text](image.png)
 
+11. В меню Dashboards нажмите на иконку "Загрузить дашборд" справа сверху и выберите файл для импорта dashboard_export_20241122T140702.zip
+
+12. Готовый дашборд будет называться "Ads basic performance"
+
 Все,  готово, вы великолепны!
 
 ## Что в файлах
